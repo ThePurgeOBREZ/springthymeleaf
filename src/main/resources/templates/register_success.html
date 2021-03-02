@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>е рок успешно 2012</title>
+</head>
+<body>
+<div align="center">
+    <h3>Регистрация успешна</h3>
+    <span>имя:</span> <span th:text="${user.name}"></span></br>
+    <span>штрудель:</span> <span th:text="${user.email}"></span></br>
+    <span>пароль:</span> <span th:text="${user.password}"></span></br>
+    <span>гендер:</span> <span th:text="${user.gender}"></span></br>
+    <span>профессия:</span> <span th:text="${user.job}"></span></br>
+    <span>женат ?????:</span> <span th:text="${user.married}"></span></br>
+    <span>нота:</span> <span th:text="${user.note}"></span></br>
+</div>
+</body>
+</html>
