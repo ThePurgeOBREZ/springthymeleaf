@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>список всех</title>
+</head>
+<body>
+<div align="center">
+    <h1>Все зарегистрированные</h1>
+    <form action="#" th:action="@{/all}" method="get" th:object="${cadet}">
+        <span>имя:</span> <span th:text="${cadet.name}"></span></br>
+        <span>фамилия:</span> <span th:text="${cadet.surname}"></span></br>
+        <span>группа:</span> <span th:text="${cadet.studyGroup}"></span></br>
+        <span>роль:</span> <span th:text="${cadet.role}"></span></br>
+    </form>
+</div>
+</body>
+</html>

@@ -4,37 +4,24 @@
     <meta charset="UTF-8">
     <title>наконец-то регистр</title>
 </head>
-
 <body>
 <div align="center">
     <h1>Регистрация:</h1>
-    <form action="#" th:action="@{/register}" method="post" th:object="${user}">
+    <font size="6">
+    <form action="#" th:action="@{/register}" method="post" th:object="${cadet}">
         <label>Имя</label>
         <input type="text" th:field="*{name}"/> <br/>
         <label>Фамилия</label>
-        <input type="text" th:field="*{email}"/> <br/>
-        <label>Пароль</label>
-        <input type="password" th:field="*{password}"/><br/>
-        <label>Дата рождения (yyyy-mm-dd)</label>
-        <input type="text" th:field="*{birthday}"/><br/>
-
-        <label>Гендер</label>
-        <input type="radio" th:field="*{gender}" value="Male"/>Male
-        <input type="radio" th:field="*{gender}" value="Female"/>Female <br/>
-
-        <label>Профессия</label>
-        <select th:field="*{job}">
-            <option th:each="p : ${jobList}" th:value="${p}" th:text="${p} + '!!'"/>
-        </select></br>
-
-        <label>женат???????</label>
-        <input type="checkbox" th:field="*{married}"/><br/>
-
-        <label>дополнительно расскажи о себе</label>
-        <textarea cols="20" rows="5" th:field="*{note}"></textarea></br>
-
+        <input type="text" th:field="*{surname}"/> <br/>
+        <label>Группа</label>
+        <input type="text" th:field="*{studyGroup}"/> <br/>
+        <label>Роль</label>
+        <select th:field="*{role}">
+            <option th:each="p : ${roleList}" th:value="${p}" th:text="${p} + ''"></option>
+        </select><br/>
         <button type="submit">Регистрация</button>
     </form>
+    </font>
 </div>
 </body>
 </html>
